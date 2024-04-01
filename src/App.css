@@ -1,38 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(173, 210, 223);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  width: 1000px;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 50px;
+}
+
+.score {
+  height: 20vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.choice {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.computer-hand {
+  width: 250px;
+}
+
+.user-hand {
+  width: 250px;
+  transform: rotateY(180deg);
+}
+
+.button-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  gap: 10px;
+}
+
+.button {
+  width: 150px;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(216, 226, 78);
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.result {
+  padding: 50px;
+}
+.game {
+  padding: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 426px) {
+  .App {
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App h1 {
+    font-size: 1.7rem;
+  }
+
+  .score h2 {
+    font-size: 1rem;
+  }
+
+  .choice .choice-player1,
+  .choice .choice-player2 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .choice .choice-player1 img,
+  .choice .choice-player2 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .button-div {
+    gap: 10px;
+    padding: 1px;
+    margin-left: 0rem;
+    width: 100px;
+  }
+
+  .button-div button {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(229, 236, 137);
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 7px;
+  }
+
+  .button-restart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .button-restart button {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(229, 236, 137);
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 7px;
+  }
+
+  .result {
+    margin-top: 2rem;
+    padding: 10px;
+  }
+
+  .result h2 {
+    margin-bottom: 1rem;
+  }
+
+  .result span {
+    font-size: 14px;
+    font-weight: 500;
   }
 }
