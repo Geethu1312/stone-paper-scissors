@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-// import axios from "axios";
 
 function App() {
   const [player1Choice, setPlayer1Choice] = useState("stone");
@@ -41,7 +40,6 @@ function App() {
         if (updatedPlayer1Points === 7) {
           setResult("Player 1 Wins");
           setGameOver(true);
-          // saveGameResult("Player 1 Wins"); // Call function to save game result
         }
       }
 
@@ -56,7 +54,6 @@ function App() {
         if (updatedPlayer2Points === 7) {
           setResult("Player2 Wins");
           setGameOver(true);
-          // saveGameResult("Player2 Wins"); // Call function to save game result
         }
       }
 
@@ -69,19 +66,6 @@ function App() {
       }
     }
   }, [player2Choice, player1Choice]);
-
-  // const saveGameResult = async (result) => {
-  //   try {
-  //     const response = await axios.post("/api/game", {
-  //       player1Choice,
-  //       player2Choice,
-  //       result,
-  //     });
-  //     console.log("Game result saved:", response.data);
-  //   } catch (error) {
-  //     console.error("Error saving game result:", error.message);
-  //   }
-  // };
 
   return (
     <div className="App">
